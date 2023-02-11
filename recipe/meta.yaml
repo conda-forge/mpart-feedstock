@@ -1,5 +1,5 @@
 {% set name = "mpart" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/MeasureTransport/MParT/archive/v{{ version }}.tar.gz
-  sha256: 969bc04e90756ff59dfdb8c02ac467ab796fc2f56609e6a45b8d5532f24d1d9d
+  sha256: 94684e8854f84a489c06904a03f5767eb269765c28732894d5954a07330a6c49
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
