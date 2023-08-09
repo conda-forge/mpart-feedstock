@@ -10,20 +10,22 @@ source:
   sha256: 096a71b1dcefb1f094971e5e04064b765db19507cd3a1010076970ca2a1fc323
 
 build:
+  skip: true  # [win]
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
 requirements:
   host:
     - {{ compiler('cxx') }}
-    - python >=3.7
+    - python
     - setuptools
     - scikit-build >=0.13
     - cmake >=3.13
     - make
     - pip
   run:
-    - python >=3.7
+    - python
 
 test:
   imports:
