@@ -19,6 +19,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake >=3.13
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - make
   host:
     - {{ compiler('cxx') }}
